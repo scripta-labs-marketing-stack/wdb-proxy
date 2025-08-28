@@ -1,20 +1,25 @@
 {
   "redirects": [
-    { "source": "/", "destination": "https://www.wdb-de.de/", "permanent": true }
+    { "source": "http://wdb-de.de/(.*)", "destination": "https://wdb-de.de/$1", "permanent": true },
+    { "source": "http://www.wdb-de.de/(.*)", "destination": "https://wdb-de.de/$1", "permanent": true },
+    { "source": "https://www.wdb-de.de/(.*)", "destination": "https://wdb-de.de/$1", "permanent": true }
   ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "https://app---wdb-1dcc6e3.base44.app/$1" }
+    {
+      "source": "/(.*)",
+      "destination": "https://app--wdb-1ddcc6e3.base44.app/$1"
+    }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "Strict-Transport-Security", "value": "max-age=15552000; includeSubDomains; preload" },
-        
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
         { "key": "Referrer-Policy", "value": "same-origin" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
         { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+    
       ]
     }
   ]
