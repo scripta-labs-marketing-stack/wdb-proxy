@@ -1,14 +1,10 @@
 {
   "redirects": [
-    { "source": "http://wdb-de.de/(.*)", "destination": "https://wdb-de.de/$1", "permanent": true },
-    { "source": "http://www.wdb-de.de/(.*)", "destination": "https://wdb-de.de/$1", "permanent": true },
-    { "source": "https://www.wdb-de.de/(.*)", "destination": "https://wdb-de.de/$1", "permanent": true }
+    { "source": "http://wdb-de.de/(.*)", "destination": "https://www.wdb-de.de/$1", "permanent": true },
+    { "source": "https://wdb-de.de/(.*)", "destination": "https://www.wdb-de.de/$1", "permanent": true }
   ],
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "https://app--wdb-1ddcc6e3.base44.app/$1"
-    }
+    { "source": "/(.*)", "destination": "https://app---wdb-1ddcc6e3.base44.app/$1" }
   ],
   "headers": [
     {
@@ -19,7 +15,6 @@
         { "key": "X-Content-Type-Options", "value": "nosniff" },
         { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
         { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
-    
       ]
     }
   ]
