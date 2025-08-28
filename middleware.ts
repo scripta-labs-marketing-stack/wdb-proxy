@@ -37,6 +37,7 @@ export default async function middleware(req: NextRequest) {
   // Störende CSP von Upstream entfernen:
   headers.delete('content-security-policy')
   headers.delete('content-security-policy-report-only')
+headers.set('x-proxy', 'wdb-via-vercel');
 
   // Eigene Security-Header setzen (CSP fügen wir später gezielt hinzu):
   headers.set('strict-transport-security', 'max-age=63072000; includeSubDomains; preload')
@@ -56,3 +57,4 @@ export default async function middleware(req: NextRequest) {
     headers
   })
 }
+
