@@ -1,18 +1,6 @@
 {
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "has": [{ "type": "host", "value": "wdb-de.de" }],
-      "destination": "https://www.wdb-de.de/$1",
-      "permanent": true
-    }
-  ],
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "has": [{ "type": "host", "value": "www.wdb-de.de" }],
-      "destination": "https://app---wdb-1dcc6e3.base44.app/$1"
-    }
+    { "source": "/(.*)", "destination": "https://app---wdb-1dcc6e3.base44.app/$1" }
   ],
   "headers": [
     {
