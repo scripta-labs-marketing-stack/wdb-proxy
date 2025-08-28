@@ -4,6 +4,7 @@
     { "source": "https://wdb-de.de/(.*)", "destination": "https://www.wdb-de.de/$1", "permanent": true }
   ]
 }
+
   "rewrites": [
     { "source": "/(.*)", "destination": "https://app---wdb-1ddcc6e3.base44.app/$1" }
   ],
